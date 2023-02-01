@@ -5,6 +5,20 @@
     <title>Title</title>
     <script src="Oblig1.js"></script>
     <style>
+        .info{
+            display: inline-block;
+            width: 80px;
+            text-align: left;
+        }
+
+        .error{
+            color: red;
+        }
+
+        th, td{
+            padding: 10px;
+            text-align: center;
+        }
 
     </style>
 </head>
@@ -13,7 +27,7 @@
 
 
 <label for="film">Velg film:</label> <select id="film">
-  <option></option>
+  <option>Velg film her</option>
   <option>Harry potter</option>
   <option>Paddington</option>
   <option>Parasite</option>
@@ -22,15 +36,15 @@
 
 
 
-<label for="antall">Antall</label> <input type="text" id="antall" maxlength="1" size="2"/><div id="feilAntall"></div><br/><br/>
+<label for="antall">Antall</label> <input type="text" id="antall" size="1"/><div id="feilAntall" class="error"></div><br/><br/>
 
-<label for="fornavn">Fornavn</label> <input type="text" id="fornavn"/><div id="feilFornavn"></div><br/><br/>
+<label for="fornavn" class="info">Fornavn</label> <input type="text" id="fornavn"/><div id="feilFornavn" class="error"></div><br/>
 
-<label for="etternavn">Etternavn</label> <input type="text" id="etternavn"/><div id="feilEtternavn"></div><br/><br/>
+<label for="etternavn" class="info">Etternavn</label> <input type="text" id="etternavn"/><div id="feilEtternavn" class="error"></div><br/>
 
-<label for="tlf">Telefonnr</label> <input type="text" id="tlf"/><div id="feiltlf"></div><br/><br/>
+<label for="tlf" class="info">Telefonnr</label> <input type="text" id="tlf"/><div id="feiltlf" class="error"></div><br/>
 
-<label for="email">Epost</label> <input type="text" id="email"/><div id="feilepost"></div><br/><br/>
+<label for="email" class="info">Epost</label> <input type="text" id="email"/><div id="feilepost" class="error"></div><br/>
 
 
 
