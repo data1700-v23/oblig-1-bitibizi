@@ -23,21 +23,51 @@ kjop = () => {
 
 
     console.log(antall)
+
+    let isValidInput = true
+    if (film === "Velg film her") {
+        document.getElementById("feilFilm").style.display = "inline";
+        isValidInput = false
+    } else{
+        document.getElementById("feilFilm").style.display="none";
+    }
+
     if (antall === "") {
-        document.getElementById("feilAntall").innerHTML = "Må skrive noe inn i antall"
-    }
-    if (fornavn === "") {
-        document.getElementById("feilFornavn").innerHTML = "Må skrive noe inn i fornavnet"
-    }
-    if (etternavn === "") {
-        document.getElementById("feilEtternavn").innerHTML = "Må skrive noe inn i etternavnet"
-    }
-    if (tlf === "") {
-        document.getElementById("feiltlf").innerHTML = "Må skrive noe inn i telefonnr"
-    }
-    if (email === "") {
-        document.getElementById("feilepost").innerHTML = "Må skrive noe inn i epost"
+        document.getElementById("feilAntall").style.display = "inline";
+        isValidInput = false
     } else {
+        document.getElementById("feilAntall").style.display = "none"
+    }
+
+    if (fornavn === "") {
+        document.getElementById("feilFornavn").style.display = "inline"
+        isValidInput = false
+    } else {
+        document.getElementById("feilFornavn").style.display = "none"
+    }
+
+    if (etternavn === "") {
+        document.getElementById("feilEtternavn").style.display = "inline"
+        isValidInput = false
+    } else {
+        document.getElementById("feilEtternavn").style.display = "none"
+    }
+
+    if (tlf === "") {
+        document.getElementById("feiltlf").style.display = "inline"
+        isValidInput = false
+    } else {
+        document.getElementById("feiltlf").style.display = "none"
+    }
+
+    if (email === "") {
+        document.getElementById("feilepost").style.display = "inline"
+        isValidInput = false
+    } else {
+        document.getElementById("feilepost").style.display = "none"
+    }
+
+    if (isValidInput) {
 
         console.log(list)
         list.push(billett)
@@ -50,20 +80,21 @@ kjop = () => {
 
         ut += "</table>"
 
-        document.getElementById("feilAntall").value=''
-        document.getElementById("feilFornavn").value=''
-        document.getElementById("feilEtternavn").value=''
-        document.getElementById("feiltlf").value=''
-        document.getElementById("feilepost").value=''
+        document.getElementById("feilFilm").style.display = "none"
+        document.getElementById("feilAntall").style.display = "none"
+        document.getElementById("feilFornavn").style.display = "none"
+        document.getElementById("feilEtternavn").style.display = "none"
+        document.getElementById("feilepost").style.display = "none"
 
+        document.getElementById("visbillett").innerHTML = ut
+
+        film="Velg film her"
+        antall = '';
+        fornavn = '';
+        etternavn = '';
+        tlf = '';
+        email = '';
     }
-    document.getElementById("visbillett").innerHTML = ut
-
-    document.getElementById("antall").value = '';
-    document.getElementById("fornavn").value = '';
-    document.getElementById("etternavn").value = '';
-    document.getElementById("tlf").value = '';
-    document.getElementById("email").value = '';
 
 
 
