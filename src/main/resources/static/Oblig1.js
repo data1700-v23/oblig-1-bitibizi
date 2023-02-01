@@ -1,7 +1,9 @@
 
+const list=[]
+
 kjop = () =>{
 
-    const list=[]
+
 
     let film=document.getElementById("film").value
     let antall=document.getElementById("antall").value
@@ -49,6 +51,11 @@ kjop = () =>{
     document.getElementById("tlf").value='';
     document.getElementById("email").value='';
 
+}
+
+slett=()=>{
+    list.length=0
+    document.getElementById("visbillett").innerHTML=""
 }
 
 
