@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:display="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="Oblig1.js"></script>
+    <style>
+
+    </style>
 </head>
 <body>
 <h1>Bestilling av kinobilleter</h1>
@@ -16,11 +19,20 @@
   <option>Parasite</option>
 </select>
 </br></br>
-<label for="antall">Antall</label> <input type="text" id="antall"/><div id="feilAntall"></div><br/><br/>
+
+
+
+<label for="antall">Antall</label> <input type="text" id="antall" maxlength="1" size="2"/><div id="feilAntall"></div><br/><br/>
+
 <label for="fornavn">Fornavn</label> <input type="text" id="fornavn"/><div id="feilFornavn"></div><br/><br/>
+
 <label for="etternavn">Etternavn</label> <input type="text" id="etternavn"/><div id="feilEtternavn"></div><br/><br/>
+
 <label for="tlf">Telefonnr</label> <input type="text" id="tlf"/><div id="feiltlf"></div><br/><br/>
+
 <label for="email">Epost</label> <input type="text" id="email"/><div id="feilepost"></div><br/><br/>
+
+
 
 <button onclick="kjop()">Kjøp billett</button>
 

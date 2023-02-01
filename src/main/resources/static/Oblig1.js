@@ -20,10 +20,10 @@ kjop = () =>{
         tlf: tlf,
         email: email}
 
-    let ut="<table><tr>"+ "<th>FILM</th><th> ANTALL</th><th>FORNAVN</th><th>ETTERNAVN</th><th>TELEFONNR</th><th>EPOST</th></tr>"
+    let ut="<table class='table'><tr>"+ "<th>FILM</th><th> ANTALL</th><th>FORNAVN</th><th>ETTERNAVN</th><th>TELEFONNR</th><th>EPOST</th></tr>"
 
-
-    if(isNaN(antall)||antall===null|| fornavn===null|| etternavn===null|| tlf===null||email===null ){
+    console.log(antall)
+    if(antall===""|| fornavn===null|| etternavn===null|| tlf===null||email===null ){
         document.getElementById("feilAntall").innerHTML="Må skrive noe inn i antall"
         document.getElementById("feilFornavn").innerHTML="Må skrive noe inn i fornavnet"
         document.getElementById("feilEtternavn").innerHTML="Må skrive noe inn i etternavnet"
