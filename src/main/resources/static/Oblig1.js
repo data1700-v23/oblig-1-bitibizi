@@ -2,14 +2,13 @@
 kjop = () =>{
 
     const list=[]
-    let ut="<table><tr>"+ "<th>Film</th><th>ANTALL</th><th>FORNAVN</th><th>ETTERNAVN</th><th>TELEFONNR</th><th>EPOST</th></tr>"
 
-    const film=document.getElementById("film").value
-    const antall=document.getElementById("antall").value
-    const fornavn=document.getElementById("fornavn").value
-    const etternavn=document.getElementById("etternavn").value
-    const tlf=document.getElementById("tlf").value
-    const email=document.getElementById("email").value
+    let film=document.getElementById("film").value
+    let antall=document.getElementById("antall").value
+    let fornavn=document.getElementById("fornavn").value
+    let etternavn=document.getElementById("etternavn").value
+    let tlf=document.getElementById("tlf").value
+    let email=document.getElementById("email").value
 
     const billett={
         film: film,
@@ -19,27 +18,21 @@ kjop = () =>{
         tlf: tlf,
         email: email}
 
+    let ut="<table><tr>"+ "<th>FILM</th><th> ANTALL</th><th>FORNAVN</th><th>ETTERNAVN</th><th>TELEFONNR</th><th>EPOST</th></tr>"
+
+
     if(isNaN(antall)||antall===null|| fornavn===null|| etternavn===null|| tlf===null||email===null ){
         document.getElementById("feilAntall").innerHTML="Må skrive noe inn i antall"
         document.getElementById("feilFornavn").innerHTML="Må skrive noe inn i fornavnet"
         document.getElementById("feilEtternavn").innerHTML="Må skrive noe inn i etternavnet"
         document.getElementById("feiltlf").innerHTML="Må skrive noe inn i telefonnr"
-        document.getElementById("feiltlf").innerHTML="Må skrive noe inn i epost"
+        document.getElementById("feilepost").innerHTML="Må skrive noe inn i epost"
     }else{
 
-        list.push(billett)
-        console.log(billett)
-        document.getElementById(antall).reset()
-        document.getElementById(fornavn).reset()
-        document.getElementById(etternavn).reset()
-        document.getElementById(tlf).reset()
-        document.getElementById(email).reset()
-
-
         console.log(list)
-
-
+        list.push(billett)
         for(let b of list){
+
             ut+="<tr>"
             ut+="<td>"+b.film+"</td><td>"+b.antall+"</td><td>"+b.fornavn+"</td><td>"+b.etternavn+"</td><td>"+b.tlf+"</td><td>"+b.email+"</td>"
             ut+= "</tr>"
@@ -49,6 +42,12 @@ kjop = () =>{
 
     }
     document.getElementById("visbillett").innerHTML=ut
+
+    document.getElementById("antall").value='';
+    document.getElementById("fornavn").value='';
+    document.getElementById("etternavn").value='';
+    document.getElementById("tlf").value='';
+    document.getElementById("email").value='';
 
 }
 
